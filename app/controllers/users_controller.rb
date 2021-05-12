@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :find_user, only: [:show, :edit, :update]
+    before_action :find_user, only: [:show, :edit, :update, :destroy]
 
     def index
         @users = User.all 
@@ -28,6 +28,10 @@ class UsersController < ApplicationController
         redirect_to user_path(@user)
     end 
 
+    def destroy
+        @user.destroy
+        redirect_to users_path
+    end 
 
 
 
