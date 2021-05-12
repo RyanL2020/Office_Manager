@@ -1,0 +1,9 @@
+<%= form_with model: @user do |f| %>
+    
+    First Name: <%= f.text_field :firs_name, placeholder: @user.firs_name %>
+    Last Name: <%= f.text_field :last_name, placeholder: @user.last_name %>
+    Username: <%= f.text_field :username, placeholder: @user.username %>
+    
+    <%= f.submit "EDIT User" %>
+    
+<% end %>

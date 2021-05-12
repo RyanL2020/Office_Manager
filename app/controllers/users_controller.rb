@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :find_user, only: [:show]
+    before_action :find_user, only: [:show, :edit, :update]
 
     def index
         @users = User.all 
@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     end 
 
     def edit 
+    end 
+    def update
+        @user.update(user_params)
+        redirect_to user_path(@user)
     end 
 
 
