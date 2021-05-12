@@ -1,0 +1,7 @@
+<br><br>
+  <h1> These are <%= @user.firs_name%>s Employees
+
+<% @employees.each do |employee| %>
+    <li><%= link_to employee.first_name, employee %></li>
+       USER ID: <%= employee.user_id %>
+    <% end %>
