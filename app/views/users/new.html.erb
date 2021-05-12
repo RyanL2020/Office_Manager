@@ -1,15 +1,16 @@
 <%= form_with model: @user do |f| %>
-        <%= f.label :firs_name, "What's Your First Name? 😄:" %>
+        <%= f.label :firs_name, "What's Your First Name? :" %>
         <%= f.text_field :firs_name  %><br>
 
-        <%= f.label :last_name, "What's Your Last Name? 😄:" %>
+        <%= f.label :last_name, "What's Your Last Name? :" %>
         <%= f.text_field :last_name  %><br>
 
         <%= f.label :username %>
         <%= f.text_field :username %><br>
 
-        <%= f.label :password, "PROBABLY JUST WANT THIS TO SAY PASSWORD..no?😅:" %>
+        <%= f.label :password, "PROBABLY JUST WANT THIS TO SAY PASSWORD..no?:" %>
         <%= f.password_field :password %><br>
-
-
         <br><br>
+        <%= f.submit "Signup" %>
+
+        <% end %>
