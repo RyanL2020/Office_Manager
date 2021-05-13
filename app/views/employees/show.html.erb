@@ -1,7 +1,8 @@
 
-<br><br>
 
-<h1> This is <%= @employee.first_name %> </h1>
+
+
+<h1>This is <%= @employee.first_name %> </h1>
 
         <%= @employee.first_name %> <%= @employee.last_name  %>
         <br>
@@ -9,3 +10,5 @@
         <%= @employee.title %>
         <br>
         <br><br>
+
+        <br><h2><%= link_to "This employee works here", employee_office_path(@employee)%><h2><br>

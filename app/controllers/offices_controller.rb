@@ -1,11 +1,21 @@
 class OfficesController < ApplicationController
 
-    before_action :find_office, only: [:show]
+    #before_action :find_office, only: [:show]
 
     def index
-        @offices = Office.all
+        @office = Office.all
     end 
+        
     def show
+        if params[:employee_id] 
+            @employee = Employee.find_by_id(params[:id])
+            @office = @employee.office
+            binding.pry
+        else 
+            find_office
+         
+        end 
+        
     end 
 
 

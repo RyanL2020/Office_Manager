@@ -9,6 +9,7 @@
         <br><br>
 
 <br><br>
-<br><h2><%= link_to "EDIT This User's Info", edit_user_path(@user) %></h2><br>
+<br><h2><%= link_to "See This users Employee list", user_employees_path(@user)%><h2><br>
 <br><br>
+<br><h2><%= link_to "EDIT This User's Info", edit_user_path(@user) %></h2><br>
 <br><h2><%= link_to "DELETE This User ", @user, method: :delete %></h2><br>

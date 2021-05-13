@@ -5,6 +5,10 @@ Rails.application.routes.draw do
     resources :offices
   end 
 
+  resources :employees do
+  resources :offices
+  end 
+
   resources :employees
   resources :offices
 end

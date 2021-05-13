@@ -3,7 +3,7 @@ class EmployeesController < ApplicationController
     before_action :find_employee, only: [:show]
 
     def index
-        if params[:user_id]
+        if params[:user_id] 
             find_user
             @employees = @user.employees
         else 
@@ -12,6 +12,7 @@ class EmployeesController < ApplicationController
     end 
 
     def show 
+        #find_employee
     end 
 
     private
@@ -22,6 +23,7 @@ class EmployeesController < ApplicationController
 
     def find_user
         @user = User.find_by_id(params[:user_id])
+
     end 
 
     def employee_params
