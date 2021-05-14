@@ -1,3 +1,22 @@
+<h1> Please Sign up here </h1>
+
+
+<br>
+
+    <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |error| %>
+        
+            <h4><%= error %></h4>
+
+        <% end %>
+    <% end %>
+
+<br>
+
+
+
+
+
 <%= form_with model: @user do |f| %>
         <%= f.label :first_name, "What's Your First Name? :" %>
         <%= f.text_field :first_name  %><br>
