@@ -10,7 +10,6 @@ class OfficesController < ApplicationController
         if params[:employee_id] 
             @employee = Employee.find_by_id(params[:id])
             @office = @employee.office
-            binding.pry
         else 
             find_office
          
