@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_140727) do
+ActiveRecord::Schema.define(version: 2021_05_15_225642) do
 
   create_table "employees", force: :cascade do |t|
     t.string "first_name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_140727) do
     t.integer "office_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "salary"
     t.index ["office_id"], name: "index_employees_on_office_id"
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
@@ -40,6 +41,8 @@ ActiveRecord::Schema.define(version: 2021_05_14_140727) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "uid"
+    t.string "provider"
   end
 
   add_foreign_key "employees", "offices"

@@ -9,12 +9,14 @@ User.destroy_all
 Office.destroy_all
 Employee.destroy_all 
 
-#option = ["entry-level", "manager", "senior-manager"]
+option = ["entry-level", "manager", "senior-manager"]
+salary = [ 50000, 75000, 100000]
 
 2.times do 
     User.create(firs_name: Faker::Name.first_name, 
      last_name: Faker::Name.last_name,
-     username: Faker::Name.initials,  password: "password" )
+     username: Faker::Name.initials, email: Faker::Internet.email,
+     password: "password" )
 end 
 
 20.times do 
@@ -26,7 +28,8 @@ end
 
 100.times do 
      Employee.create(first_name: Faker::Name.first_name , last_name: Faker::Name.last_name, 
-     title: "new hire#", user: User.all.sample, office: Office.all.sample )
+     title: option.sample, salary: salary.sample, 
+     user: User.all.sample, office: Office.all.sample )
 end 
 
 puts "YOU GOT SEEDS!"

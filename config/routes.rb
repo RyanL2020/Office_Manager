@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-  get 'new/create'
-  get 'new/login'
-  get 'new/destroy'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  
   resources :users do
     resources :employees
     resources :offices
   end 
 
   resources :employees do
-  resources :offices
+   resources :offices
   end 
 
   resources :employees
@@ -21,4 +19,6 @@ Rails.application.routes.draw do
 
   delete 'logout', to: "sessions#destroy"
 
+  #get 'auth/github', as: 'github_login'
+  #get '/auth/:provider/callback', to: "sessions#update"
 end
