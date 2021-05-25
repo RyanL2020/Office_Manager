@@ -9,7 +9,7 @@
 
 <% else %>
 
-    <h2> Hey <%= current_user.first_name %>! </h2>
+    <h2> Hey <%= current_user.email %>! </h2>
     <li><%= link_to "Log Out", logout_path,  method: :delete %></li>
     
 <% end %>

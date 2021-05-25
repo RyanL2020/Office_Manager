@@ -13,11 +13,15 @@ Rails.application.routes.draw do
   resources :employees
   resources :offices
 
+  get '/search' => 'offices#search', :as => 'search_office'
+
   get 'login', to: "sessions#new"
 
   post 'login', to: "sessions#create"
 
   delete 'logout', to: "sessions#destroy"
+
+  get '/auth/google_oauth2/callback', to: "sessions#omniauth"
 
   #get 'auth/github', as: 'github_login'
   #get '/auth/:provider/callback', to: "sessions#update"

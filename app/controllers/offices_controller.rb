@@ -12,12 +12,20 @@ class OfficesController < ApplicationController
             @office = @employee.office
         else 
             find_office
-         
         end 
-        
     end 
-
-
+         
+        
+    def search 
+        if params[:search].blank? 
+            render :search
+         else  
+           @parameter = params[:search].downcase  
+           @results = Office.locations(@parameter)
+           #binding.pry
+        end 
+    end  
+            
     private
 
     def find_office
@@ -27,4 +35,7 @@ class OfficesController < ApplicationController
     def employee_params
         params.require(:office).permit(:company_name, :location, :owner)
     end 
-end
+
+end 
+
+
