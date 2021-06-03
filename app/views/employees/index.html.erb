@@ -1,7 +1,10 @@
 <br><br>
-  <h1> These are <%= @user.first_name %>s Employees </h1>
-
+  <% if @user %>
+  <h1> These are <%=  @user.first_name %>s Employees </h1>
+  <% end %>
+<ol>
 <% @employees.each do |employee| %>
-    <li><%= link_to employee.first_name, employee %></li>
-       USER ID: <%= employee.user_id %>
+    <li><%= link_to employee.first_name, employee %> <%= employee.last_name %></li>
+      
     <% end %>
+</ol>

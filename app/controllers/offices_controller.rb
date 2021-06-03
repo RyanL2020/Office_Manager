@@ -22,7 +22,6 @@ class OfficesController < ApplicationController
          else  
            @parameter = params[:search].downcase  
            @results = Office.locations(@parameter)
-           #binding.pry
         end 
     end  
             

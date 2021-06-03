@@ -12,8 +12,49 @@ class EmployeesController < ApplicationController
     end 
 
     def show 
-        #find_employee
     end 
+
+    def new
+        if params[:user_id]  
+            find_user
+            @employee = @user.employees.build
+            binding.pry
+            
+         else  
+            
+            redirect user_path(@user) 
+        end
+   
+    end
+    
+
+    def create
+        if params[:user_id]
+            find_user
+            @employee = @user.employees.build(employee_params) 
+        
+        
+        else
+            redirect_to user_employees_path(@user)
+        end
+        if @employee.save
+         
+
+            if @user
+                redirect_to user_employee_path(@user, @employee)
+            else
+                redirect_to @employee 
+                binding.pry  
+            end
+        else
+            biniding.pry
+            render :new
+        end
+    end
+         
+            
+                  
+
 
     private
 
@@ -27,6 +68,20 @@ class EmployeesController < ApplicationController
     end 
 
     def employee_params
-        params.require(:employee).permit(:firs_name, :last_name, :title, :user_id, :office_id)
+        params.require(:employee).permit(:first_name, :last_name, :title, :user_id, :office_id)
     end 
+
+    
 end
+
+
+            
+
+
+
+
+
+
+
+        
+

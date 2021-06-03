@@ -1,0 +1,22 @@
+<h1> New Employee </h1>
+
+
+    
+
+<%= form_with model: [@user, @employee] do |f| %>
+        <%= f.label :first_name, "Employee's First Name? :" %>
+        <%= f.text_field :first_name  %><br>
+
+        <%= f.label :last_name, "Employee's Last Name? :" %>
+        <%= f.text_field :last_name  %><br>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %><br>
+
+        <%= f.label :office_id %><br>
+        <%= f.collection_select :office_id, Office.all, :id, :company_name %><br>
+
+        
+        <%= f.submit "Create Employee" %>
+
+        <% end %>

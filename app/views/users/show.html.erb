@@ -1,17 +1,17 @@
 <h1> Welcome <%= @user.first_name %> </h1>
 
-        <%= @user.first_name %>
+       First name: <%= @user.first_name %>
         <br>
-        <%= @user.last_name  %>
+        Last name: <%= @user.last_name  %>
         <br>
-        <%= @user.email %>
+        Email address: <%= @user.email %>
         <br>
-        <%= @user.username %>
+        Username: <%= @user.username %>
         <br>
         <br><br>
 
 <br><br>
 <br><h2><%= link_to "See This users Employee list", user_employees_path(@user)%><h2><br>
-<br><br>
+<br><h2><%= link_to "Create New Employee", new_user_employee_path(@user) %></h2><br>
 <br><h2><%= link_to "EDIT This User's Info", edit_user_path(@user) %></h2><br>
 <br><h2><%= link_to "DELETE This User ", @user, method: :delete %></h2><br>
