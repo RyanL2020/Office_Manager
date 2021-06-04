@@ -18,7 +18,7 @@ class EmployeesController < ApplicationController
         if params[:user_id]  
             find_user
             @employee = @user.employees.build
-            binding.pry
+            
             
          else  
             
@@ -44,10 +44,10 @@ class EmployeesController < ApplicationController
                 redirect_to user_employee_path(@user, @employee)
             else
                 redirect_to @employee 
-                binding.pry  
+                 
             end
         else
-            biniding.pry
+            
             render :new
         end
     end
