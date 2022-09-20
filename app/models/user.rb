@@ -10,7 +10,7 @@ class User < ApplicationRecord
         u.username = auth['info']['email']
         u.email = auth['info']['email']
         u.password = SecureRandom.hex(16)
-        binding.pry
+        #binding.pry
       end 
     end 
 end

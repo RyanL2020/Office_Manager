@@ -3,4 +3,5 @@
 <% @office.each do |office| %>
   <li><%= link_to office.company_name, office %></li>
       number of employees: <%= office.employees.count%>
+      
   <%end %>

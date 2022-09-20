@@ -4,7 +4,7 @@
   <% end %>
 <ol>
 <% @employees.each do |employee| %>
-    <li><%= link_to employee.first_name, employee %> <%= employee.last_name %></li>
+    <li><%= link_to employee.first_name, employee %> <%= link_to employee.last_name %></li>
       
     <% end %>
 </ol>
