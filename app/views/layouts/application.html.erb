@@ -7,12 +7,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
   </head>
 
   <body>
     
-    <%= button_to "Login with Google", '/auth/google_oauth2'%>
+    <%# <%= button_to "Login with Google", '/auth/google_oauth2'%> 
     <%= render 'layouts/nav_bar' %>
 
   <% if logged_in? %>

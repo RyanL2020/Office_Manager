@@ -13,7 +13,7 @@ option = ["entry-level", "manager", "senior-manager"]
 salary = [ 50000, 75000, 100000]
 
 2.times do 
-    User.create(firs_name: Faker::Name.first_name, 
+    User.create(first_name: Faker::Name.first_name, 
      last_name: Faker::Name.last_name,
      username: Faker::Name.initials, email: Faker::Internet.email,
      password: "password" )

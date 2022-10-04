@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  root 'pages#home'
   
   resources :users do
     resources :employees
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'login', to: "sessions#new"
 
   post 'login', to: "sessions#create"
+
+  get 'logout', to: "sessions#new"
 
   delete 'logout', to: "sessions#destroy"
 
