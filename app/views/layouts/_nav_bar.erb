@@ -1,23 +1,17 @@
 
 
-<ul>
 
+<div class="button-container">
 <% if !logged_in? %>
 
-    <li><%= link_to "Sign Up", new_user_path %></li>
-    <li><%= link_to "Log In",  login_path    %></li>
+   <button class="sign-up-button"> <%= link_to "Sign Up", new_user_path %> </button>
+   <button class="login-button"> <%= link_to "Log In",  login_path%> </button>
 
 <% else %>
 
-    <li><%= link_to "Log Out", logout_path,  method: :delete %></li>
+    <button class="logout-button"><%= link_to "Log Out", logout_path,  method: :delete %> </button>
     
 <% end %>
 
-</ul>
 
-
-<br><br>
-
-
-----------------------------------------------------------------------------------------------------------------
 
