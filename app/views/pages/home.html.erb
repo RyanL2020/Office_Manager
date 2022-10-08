@@ -1,4 +1,8 @@
+<%= stylesheet_link_tag 'home.css'%>
+
 <h1> Welcome to Office Manager </h1>
 
-<%= button_to "Login with Google", '/auth/google_oauth2'%> 
+<div>
 <%= render 'layouts/nav_bar' %>
+<%= button_to "Login with Google", '/auth/google_oauth2'%> 
+</div>
