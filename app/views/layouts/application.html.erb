@@ -14,20 +14,17 @@
     
 
   <% if logged_in? %>
-    <h3> Search by state to find company names </h3>
+    <%= render 'layouts/nav_bar' %>
+    
 
     <%= form_tag(search_office_path, :method => "get",   
     class: 'navbar-form navbar-left') do %>  
-   <div class="input-group">  
-    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search by state", class: "form-control" %>  
     <div class="input-group-btn">  
-      <%= button_tag "Search", :class => 'button',:name => nil %>  
-      <button><%= link_to "See This users Employee list", user_employees_path(@user)%></button>
-<button><%= link_to "Create New Employee", new_user_employee_path(@user) %></button>
-<button><%= link_to "EDIT This User's Info", edit_user_path(@user) %></button>
-<button><%= link_to "DELETE This User ", @user, method: :delete %></button>
-<button><%= link_to "List of offices ", user_offices_path(@user) %></button>
-<button><%= link_to "Log Out", logout_path,  method: :delete %> </button>
+    <%= button_tag "Search", :class => 'button',:name => nil %>  
+      
+
     </div>  
    </div> 
   <% end %> 

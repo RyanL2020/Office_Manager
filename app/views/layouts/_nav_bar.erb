@@ -3,12 +3,16 @@
 
 <% if !logged_in? %>
     <div class="button-container">
-   <button> <%= link_to "Sign Up", new_user_path %> </button>
-   <button> <%= link_to "Log In",  login_path%> </button>
+   
+    <button> <%= link_to "Sign Up", new_user_path %></button> 
+    <button> <%= link_to "Log In",  login_path%> </button> 
     </div>
 <% else %>
+     <button><%= link_to "Create New Employee", new_user_employee_path(@user) %></button> 
+     <button> <%= link_to "See This users Employee list", user_employees_path(@user)%></button>
+     <button><%= link_to "List of offices ", user_offices_path(@user)%> </button> 
 
-    <button><%= link_to "Log Out", logout_path,  method: :delete %> </button>
+     <button><%= link_to "Log Out", logout_path,  method: :delete %> </button>
     
 <% end %>
 

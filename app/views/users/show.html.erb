@@ -7,7 +7,12 @@
         <li> Email address: <%= @user.email %>  </li>
         <li> Username: <%= @user.username %>  </li>
         </ul>
-      
+
+       
+
+        <button><%= link_to "EDIT This User's Info", edit_user_path(@user)%></button> 
+        <button><%= link_to "DELETE This User ", @user, method: :delete %> </button> 
+       
       
         
         
