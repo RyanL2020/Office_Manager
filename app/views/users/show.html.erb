@@ -1,18 +1,15 @@
-<h1> Welcome <%= @user.first_name %> </h1>
+<%= stylesheet_link_tag 'usershow.css'%>
 
-       First name: <%= @user.first_name %>
-        <br>
-        Last name: <%= @user.last_name  %>
-        <br>
-        Email address: <%= @user.email %>
-        <br>
-        Username: <%= @user.username %>
-        <br>
-        <br><br>
-
-<br><br>
-<br><h2><%= link_to "See This users Employee list", user_employees_path(@user)%><h2><br>
-<br><h2><%= link_to "Create New Employee", new_user_employee_path(@user) %></h2><br>
-<br><h2><%= link_to "EDIT This User's Info", edit_user_path(@user) %></h2><br>
-<br><h2><%= link_to "DELETE This User ", @user, method: :delete %></h2><br>
-<br><h2><%= link_to "List of offices ", user_offices_path(@user) %></h2><br>
+<h1> Welcome <%= @user.first_name %> </h1>   
+        <ul>
+        <li> First name: <%= @user.first_name %>   </li>
+        <li> Last name: <%= @user.last_name  %>  </li>
+        <li> Email address: <%= @user.email %>  </li>
+        <li> Username: <%= @user.username %>  </li>
+        </ul>
+      
+      
+        
+        
+        
+        
