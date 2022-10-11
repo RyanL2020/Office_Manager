@@ -1,14 +1,18 @@
+
+<div>
+<h1 class='login'>Please Login</h1>
 <%= form_with url: '/login' do |f| %>
+    <div>
     <%= f.label :username %>
-    <%= f.text_field :username %><br>
-
-        <br>
-    
+    <%= f.text_field :username %>
+    </div>
+    <div>
     <%= f.label :password %>
-    <%= f.password_field :password %><br>
-
-        <br><br>
-    
+    <%= f.password_field :password %>
+    </div>
+       
+    <div>
     <%= f.submit "Login" %>
-    
+    </div>
 <% end %>
+</div>

@@ -9,11 +9,11 @@
     </div>
 <% else %>
 <ul>
-    <li> <button><%= link_to "Create New Employee", new_user_employee_path(@user) %></button> 
+    <li> <button><%= link_to "Create New Employee", new_user_employee_path(@user) %></button> </li>
     <li><button> <%= link_to "See This users Employee list", user_employees_path(@user)%></button> </li>
-     <li><button><%= link_to "List of offices ", user_offices_path(@user)%> </button> </li>
+    <li><button><%= link_to "List of offices ", user_offices_path(@user)%> </button> </li>
 
-     <li><button><%= link_to "Log Out", logout_path,  method: :delete %> </button></li>
+    <li><button><%= link_to "Log Out", logout_path,  method: :delete %> </button></li>
     </ul>
 <% end %>
 
